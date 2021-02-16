@@ -1,7 +1,7 @@
 {
-    "name": "admin-form",
-    "version": "0.1.3",
-    "description": "Form for admin",
+    "name": "dialog-box",
+    "version": "0.1.0",
+    "description": "Dialog Box for Admin",
     "main": "./lib/DialogBox.js",
     "license": "MIT",
     "scripts": {
@@ -22,6 +22,7 @@
         "css-loader": "^3.5.1",
         "path": "^0.12.7",
         "prop-types": "^15.6.0",
+        "reactstrap": "5.0.0-beta",
         "react": "^16.0.0",
         "react-dom": "^16.0.0",
         "standard": "^16.0.3",
