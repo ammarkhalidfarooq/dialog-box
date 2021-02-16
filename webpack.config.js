@@ -2,10 +2,10 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: './src/CustomForm.js',
+  entry: './src/DialogBox.js',
   output: {
     path: path.resolve('lib'),
-    filename: 'CustomForm.js',
+    filename: 'DialogBox.js',
     libraryTarget: 'commonjs2',
   },
   module: {
