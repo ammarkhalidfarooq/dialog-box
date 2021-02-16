@@ -27,6 +27,10 @@
   margin-top: 5px;
 }
 
+.grey {
+  color: grey;
+}
+
 .form-horizontal .control-label {
   padding-top: 8px;
   text-align: right;
