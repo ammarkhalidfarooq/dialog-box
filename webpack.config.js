@@ -1,19 +1,19 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
   mode: 'production',
-  entry: './src/CustomForm.js',
+  entry: './src/DialogBox.js',
   output: {
     path: path.resolve('lib'),
-    filename: 'CustomForm.js',
-    libraryTarget: 'commonjs2',
+    filename: 'DialogBox.js',
+    libraryTarget: 'commonjs2'
   },
   module: {
     rules: [
       {
         test: /\.js?$/,
         exclude: /(node_modules)/,
-        use: 'babel-loader',
+        use: 'babel-loader'
       },
       {
         test: /\.css$/,
@@ -22,27 +22,27 @@ module.exports = {
           'css-loader'
         ]
       }
-    ],
+    ]
   },
   resolve: {
     alias: {
-      'react': path.resolve(__dirname, './node_modules/react'),
-      'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
+      react: path.resolve(__dirname, './node_modules/react'),
+      'react-dom': path.resolve(__dirname, './node_modules/react-dom')
     }
   },
   externals: {
-    // Don't bundle react or react-dom      
+    // Don't bundle react or react-dom
     react: {
-      commonjs: "react",
-      commonjs2: "react",
-      amd: "React",
-      root: "React"
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'React',
+      root: 'React'
     },
-    "react-dom": {
-      commonjs: "react-dom",
-      commonjs2: "react-dom",
-      amd: "ReactDOM",
-      root: "ReactDOM"
+    'react-dom': {
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
+      amd: 'ReactDOM',
+      root: 'ReactDOM'
     }
   }
-};
+}
