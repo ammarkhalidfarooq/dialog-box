@@ -31,5 +31,7 @@
         "webpack": "^4.5.0",
         "webpack-cli": "^3.2.1"
     },
-    "dependencies": {}
+    "dependencies": {
+        "markdownlint-cli": "^0.26.0"
+    }
 }
