@@ -1,4 +1,3 @@
-// Replace this file with your actual React component
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Modal, ModalHeader, ModalBody } from 'reactstrap'
