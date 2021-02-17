@@ -30,7 +30,7 @@ const DialogBox = ({ dialogBox, onClick, dialogBoxHeader, dialogBoxBody, loading
         <button
           type='button'
           className={`${loadingAction ? 'disabled' : ''} btn btn-primary`}
-          onClick={() => this.onClick()}
+          onClick={() => onClick}
         >
           No
         </button>
