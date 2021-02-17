@@ -1,7 +1,7 @@
 {
-    "name": "admin-form",
-    "version": "0.1.3",
-    "description": "Form for admin",
+    "name": "@ammar.khalid/dialog-box",
+    "version": "0.1.0",
+    "description": "Dialog Box for Admin",
     "main": "./lib/DialogBox.js",
     "license": "MIT",
     "scripts": {
@@ -10,8 +10,7 @@
     "peerDependencies": {
         "prop-types": "^15.6.0",
         "react": "^16.0.0",
-        "react-dom": "^16.0.0",
-        "reactstrap": "5.0.0-beta"
+        "react-dom": "^16.0.0"
     },
     "devDependencies": {
         "babel-core": "^6.21.0",
@@ -32,6 +31,7 @@
         "webpack-cli": "^3.2.1"
     },
     "dependencies": {
-        "markdownlint-cli": "^0.26.0"
+        "markdownlint-cli": "^0.26.0",
+        "reactstrap": "^8.9.0"
     }
 }
