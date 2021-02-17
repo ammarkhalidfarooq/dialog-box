@@ -1,10 +1,9 @@
-// Replace this file with your actual React component
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Modal, ModalHeader, ModalBody } from 'reactstrap'
 import './DialogBox.css'
 
-const DialogBox = ({ dialogBox, onClick, dialogBoxHeader, dialogBoxBody }) => (
+const DialogBox = ({ dialogBox, confirmationClick, rejectionClick, dialogBoxHeader, dialogBoxBody, loadingAction }) => (
   <Modal
     size='sm'
     isOpen={dialogBox}
@@ -18,20 +17,43 @@ const DialogBox = ({ dialogBox, onClick, dialogBoxHeader, dialogBoxBody }) => (
     </ModalHeader>
     <ModalBody>
       <div>{dialogBoxBody}</div>
+      <div className='float-right'>
+        <button
+          type='button'
+          className={`${loadingAction ? 'disabled fa fa-spinner' : ''} btn btn-success`}
+          style={{ marginRight: 5 }}
+          onClick={confirmationClick}
+        >
+          Yes
+        </button>
+        <button
+          type='button'
+          className={`${loadingAction ? 'disabled' : ''} btn btn-primary`}
+          onClick={rejectionClick}
+        >
+          No
+        </button>
+      </div>
     </ModalBody>
   </Modal>
 )
 
 DialogBox.propTypes = {
   dialogBox: PropTypes.bool.isRequired,
+  loadingAction: PropTypes.bool.isRequired,
   dialogBoxHeader: PropTypes.string.isRequired,
   DialogBoxBody: PropTypes.string.isRequired,
-  onClick: PropTypes.func
+  confirmationClick: PropTypes.func,
+  rejectionClick: PropTypes.func
 }
 
 DialogBox.defaultProps = {
   dialogBox: false,
-  onClick: () => {}
+  loadingAction: false,
+  dialogBoxHeader: '',
+  dialogBoxBody: '',
+  confirmationClick: () => {},
+  rejectionClick: () => {}
 }
 
 export default DialogBox
