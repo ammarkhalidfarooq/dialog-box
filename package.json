@@ -10,8 +10,7 @@
     "peerDependencies": {
         "prop-types": "^15.6.0",
         "react": "^16.0.0",
-        "react-dom": "^16.0.0",
-        "reactstrap": "5.0.0-beta"
+        "react-dom": "^16.0.0"
     },
     "devDependencies": {
         "babel-core": "^6.21.0",
@@ -22,7 +21,6 @@
         "css-loader": "^3.5.1",
         "path": "^0.12.7",
         "prop-types": "^15.6.0",
-        "reactstrap": "5.0.0-beta",
         "react": "^16.0.0",
         "react-dom": "^16.0.0",
         "standard": "^16.0.3",
@@ -33,6 +31,7 @@
         "webpack-cli": "^3.2.1"
     },
     "dependencies": {
-        "markdownlint-cli": "^0.26.0"
+        "markdownlint-cli": "^0.26.0",
+        "reactstrap": "^8.9.0"
     }
 }
