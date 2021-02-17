@@ -31,6 +31,8 @@ DialogBox.propTypes = {
 
 DialogBox.defaultProps = {
   dialogBox: false,
+  dialogBoxHeader: '',
+  dialogBoxBody: '',
   onClick: () => {}
 }
 
