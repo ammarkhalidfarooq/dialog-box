@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Modal, ModalHeader, ModalBody } from 'reactstrap'
 import './DialogBox.css'
 
-const DialogBox = ({ dialogBox, onClick, dialogBoxHeader, dialogBoxBody, loadingAction }) => (
+const DialogBox = ({ dialogBox, confirmationClick, rejectionClick, dialogBoxHeader, dialogBoxBody, loadingAction }) => (
   <Modal
     size='sm'
     isOpen={dialogBox}
@@ -23,14 +23,14 @@ const DialogBox = ({ dialogBox, onClick, dialogBoxHeader, dialogBoxBody, loading
           type='button'
           className={`${loadingAction ? 'disabled fa fa-spinner' : ''} btn btn-success`}
           style={{ marginRight: 5 }}
-          onClick={onClick}
+          onClick={confirmationClick}
         >
           Yes
         </button>
         <button
           type='button'
           className={`${loadingAction ? 'disabled' : ''} btn btn-primary`}
-          onClick={onClick}
+          onClick={rejectionClick}
         >
           No
         </button>
@@ -44,7 +44,8 @@ DialogBox.propTypes = {
   loadingAction: PropTypes.bool.isRequired,
   dialogBoxHeader: PropTypes.string.isRequired,
   DialogBoxBody: PropTypes.string.isRequired,
-  onClick: PropTypes.func
+  confirmationClick: PropTypes.func,
+  rejectionClick: PropTypes.func
 }
 
 DialogBox.defaultProps = {
@@ -52,7 +53,8 @@ DialogBox.defaultProps = {
   loadingAction: false,
   dialogBoxHeader: '',
   dialogBoxBody: '',
-  onClick: () => {}
+  confirmationClick: () => {},
+  rejectionClick: () => {}
 }
 
 export default DialogBox
