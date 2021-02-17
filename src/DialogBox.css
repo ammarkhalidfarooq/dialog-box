@@ -4,6 +4,10 @@
   margin-bottom: 10px;
 }
 
+.grey {
+  color: #151b1e;
+}
+
 .x_panel {
   position: relative;
   width: 100%;
@@ -25,10 +29,6 @@
   float: left;
   clear: both;
   margin-top: 5px;
-}
-
-.grey {
-  color: grey;
 }
 
 .form-horizontal .control-label {
