@@ -23,14 +23,14 @@ const DialogBox = ({ dialogBox, onClick, dialogBoxHeader, dialogBoxBody, loading
           type='button'
           className={`${loadingAction ? 'disabled fa fa-spinner' : ''} btn btn-success`}
           style={{ marginRight: 5 }}
-          onClick={() => this.onClick()}
+          onClick={onClick}
         >
           Yes
         </button>
         <button
           type='button'
           className={`${loadingAction ? 'disabled' : ''} btn btn-primary`}
-          onClick={() => onClick}
+          onClick={onClick}
         >
           No
         </button>

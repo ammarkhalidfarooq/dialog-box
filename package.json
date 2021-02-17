@@ -1,6 +1,6 @@
 {
     "name": "@ammar.khalid/dialog-box",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "Dialog Box for Admin",
     "main": "./lib/DialogBox.js",
     "license": "MIT",
