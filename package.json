@@ -1,5 +1,5 @@
 {
-    "name": "dialog-box",
+    "name": "@ammar.khalid/dialog-box",
     "version": "0.1.0",
     "description": "Dialog Box for Admin",
     "main": "./lib/DialogBox.js",
