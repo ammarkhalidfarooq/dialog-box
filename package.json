@@ -1,6 +1,6 @@
 {
     "name": "@ammar.khalid/dialog-box",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "description": "Dialog Box for Admin",
     "main": "./lib/DialogBox.js",
     "license": "MIT",
@@ -29,6 +29,10 @@
         "stylelint-config-standard": "^20.0.0",
         "webpack": "^4.5.0",
         "webpack-cli": "^3.2.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ammarkhalidfarooq/dialog-box"
     },
     "dependencies": {
         "markdownlint-cli": "^0.26.0",
