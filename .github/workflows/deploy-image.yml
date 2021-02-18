@@ -47,11 +47,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Build container image
-      uses: docker/build-push-action@v1
+      uses: npm/build-push-action@v1
       with:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
-        registry: docker.pkg.github.com
+        registry: npm.pkg.github.com
         repository: ${{ github.repository }}
         tag_with_sha: true
         tag_with_ref: true
