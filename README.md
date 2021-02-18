@@ -16,6 +16,7 @@
       loadingAction=true
       confirmationClick={() => this.someFunction()}
       rejectionClick={() => this.anotherFunction()}
+      toggleClose={() => this.toggle()}
    />
 ```
 
@@ -27,7 +28,8 @@
    dialogBoxHeader: PropTypes.string.isRequired,
    dialogBoxBody: PropTypes.string.isRequired,
    confirmationClick: PropTypes.func,
-   rejectionClick: PropTypes.func`
+   rejectionClick: PropTypes.func,
+   toggleClose: PropTypes.func
 ```
 
 ## Contributing

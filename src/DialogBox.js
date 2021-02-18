@@ -3,15 +3,13 @@ import PropTypes from 'prop-types'
 import { Modal, ModalHeader, ModalBody } from 'reactstrap'
 import './DialogBox.css'
 
-const DialogBox = ({ dialogBox, confirmationClick, rejectionClick, dialogBoxHeader, dialogBoxBody, loadingAction }) => (
+const DialogBox = ({ dialogBox, confirmationClick, rejectionClick, dialogBoxHeader, dialogBoxBody, loadingAction, toggleClose }) => (
   <Modal
     size='sm'
     isOpen={dialogBox}
   >
     <ModalHeader
-      toggle={() => this.setState({
-        dialogBox: false
-      })}
+      toggle={toggleClose}
     >
       <div className='grey'>{dialogBoxHeader}</div>
     </ModalHeader>
@@ -44,7 +42,8 @@ DialogBox.propTypes = {
   dialogBoxHeader: PropTypes.string.isRequired,
   DialogBoxBody: PropTypes.string.isRequired,
   confirmationClick: PropTypes.func,
-  rejectionClick: PropTypes.func
+  rejectionClick: PropTypes.func,
+  toggleClose: PropTypes.func
 }
 
 DialogBox.defaultProps = {
@@ -53,7 +52,8 @@ DialogBox.defaultProps = {
   dialogBoxHeader: '',
   dialogBoxBody: '',
   confirmationClick: () => {},
-  rejectionClick: () => {}
+  rejectionClick: () => {},
+  toggleClose: () => {}
 }
 
 export default DialogBox
