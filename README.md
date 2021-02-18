@@ -19,9 +19,13 @@
    />
 ```
 
+## Properties
+
+```python
    dialogBox: PropTypes.bool.isRequired,
    loadingAction: PropTypes.bool.isRequired,
    dialogBoxHeader: PropTypes.string.isRequired,
    dialogBoxBody: PropTypes.string.isRequired,
    confirmationClick: PropTypes.func,
    rejectionClick: PropTypes.func`
+```
