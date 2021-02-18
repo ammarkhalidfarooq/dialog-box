@@ -4,7 +4,7 @@
 
 ## Installation
 
-1. Install using `npm i @ammar.khalid/dialog-box`.
+`npm i @ammar.khalid/dialog-box`
 
 ## Usage
 
