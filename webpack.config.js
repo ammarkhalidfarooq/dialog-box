@@ -2,10 +2,11 @@ const path = require('path')
 
 module.exports = {
   mode: 'production',
-  entry: './src/DialogBox.js',
+  entry: ['./src/DialogBox.js', './src/MessageBox.js'],
+  // entry: './src/DialogBox.js',
   output: {
     path: path.resolve('lib'),
-    filename: 'DialogBox.js',
+    filename: 'bundle.js',
     libraryTarget: 'commonjs2'
   },
   module: {
