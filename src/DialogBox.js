@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Modal, ModalHeader, ModalBody } from 'reactstrap'
-import './DialogBox.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Modal, ModalHeader, ModalBody } from 'reactstrap';
+import './DialogBox.css';
 
 const DialogBox = ({ dialogBox, confirmationClick, rejectionClick, dialogBoxHeader, dialogBoxBody, loadingAction, toggleClose }) => (
   <Modal
