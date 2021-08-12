@@ -1,32 +1,37 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Modal, ModalHeader, ModalBody } from 'reactstrap'
-import './DialogBox.css'
+import React from "react";
+import PropTypes from "prop-types";
+import { Modal, ModalHeader, ModalBody } from "reactstrap";
+import "./DialogBox.css";
 
-const DialogBox = ({ dialogBox, confirmationClick, rejectionClick, dialogBoxHeader, dialogBoxBody, loadingAction, toggleClose }) => (
-  <Modal
-    size='sm'
-    isOpen={dialogBox}
-  >
-    <ModalHeader
-      toggle={toggleClose}
-    >
-      <div className='grey'>{dialogBoxHeader}</div>
+const DialogBox = ({
+  dialogBox,
+  confirmationClick,
+  rejectionClick,
+  dialogBoxHeader,
+  dialogBoxBody,
+  loadingAction,
+  toggleClose,
+}) => (
+  <Modal size="sm" isOpen={dialogBox}>
+    <ModalHeader toggle={toggleClose}>
+      <div className="grey">{dialogBoxHeader}</div>
     </ModalHeader>
     <ModalBody>
       <div>{dialogBoxBody}</div>
-      <div className='float-right'>
+      <div className="float-right">
         <button
-          type='button'
-          className={`${loadingAction ? 'disabled fa fa-spinner' : ''} btn btn-success`}
+          type="button"
+          className={`${
+            loadingAction ? "disabled fa fa-spinner" : ""
+          } btn btn-success`}
           style={{ marginRight: 5 }}
           onClick={confirmationClick}
         >
           Yes
         </button>
         <button
-          type='button'
-          className={`${loadingAction ? 'disabled' : ''} btn btn-primary`}
+          type="button"
+          className={`${loadingAction ? "disabled" : ""} btn btn-danger`}
           onClick={rejectionClick}
         >
           No
@@ -34,7 +39,7 @@ const DialogBox = ({ dialogBox, confirmationClick, rejectionClick, dialogBoxHead
       </div>
     </ModalBody>
   </Modal>
-)
+);
 
 DialogBox.propTypes = {
   dialogBox: PropTypes.bool.isRequired,
@@ -43,17 +48,17 @@ DialogBox.propTypes = {
   DialogBoxBody: PropTypes.string.isRequired,
   confirmationClick: PropTypes.func,
   rejectionClick: PropTypes.func,
-  toggleClose: PropTypes.func
-}
+  toggleClose: PropTypes.func,
+};
 
 DialogBox.defaultProps = {
   dialogBox: false,
   loadingAction: false,
-  dialogBoxHeader: '',
-  dialogBoxBody: '',
+  dialogBoxHeader: "",
+  dialogBoxBody: "",
   confirmationClick: () => {},
   rejectionClick: () => {},
-  toggleClose: () => {}
-}
+  toggleClose: () => {},
+};
 
-export default DialogBox
+export default DialogBox;
