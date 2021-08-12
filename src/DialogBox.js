@@ -30,8 +30,13 @@ const DialogBox = ({
           Yes
         </button>
         <button
+          style={{
+            color: "#fff",
+            backgroundColor: "#dc3545",
+            borderColor: "#dc3545",
+          }}
           type="button"
-          className={`${loadingAction ? "disabled" : ""} btn btn-danger`}
+          className={`${loadingAction ? "disabled" : ""} btn`}
           onClick={rejectionClick}
         >
           No
